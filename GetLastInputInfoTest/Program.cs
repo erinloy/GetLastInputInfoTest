@@ -10,6 +10,14 @@ namespace GetLastInputInfoTest
     {
         static void Main(string[] args)
         {
+            do
+            {
+                uint t = GetLastInputInfoWrapper.GetLastInputTime();
+                Console.WriteLine(t);
+                System.Threading.Thread.Sleep(1000);
+            }
+            while (!Console.KeyAvailable);
+            
         }
     }
 }
